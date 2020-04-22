@@ -119,7 +119,7 @@ function parseCost(array) {
                 } else if (JSON.parse(request.responseText).Cost_Delivery !== undefined && JSON.parse(request.responseText).Cost_Delivery != 0) {
                     cost.classList.remove('hidden');
                     message.classList.remove('hidden');
-                    cost.innerHTML = `${Number(JSON.parse(request.responseText).Cost_Delivery) + Number(JSON.parse(request.responseText).Cost_OversizedCargo)}  BYN с НДС`;
+                    cost.innerHTML = `${(Number(JSON.parse(request.responseText).Cost_Delivery) + Number(JSON.parse(request.responseText).Cost_OversizedCargo)).toFixed(2)}  BYN с НДС`;
                     message.innerHTML = `${JSON.parse(request.responseText).Warning_Customer}`;
                     dates[0].innerHTML = `${JSON.parse(request.responseText).Date_download.split('-').reverse().join('.')}`;
                     dates[1].innerHTML = `${JSON.parse(request.responseText).Date_delivery.split('-').reverse().join('.')}`;

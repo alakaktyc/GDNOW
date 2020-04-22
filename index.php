@@ -1027,7 +1027,7 @@
             Комментарий
             <input type="text" name="comment">
         </label>
-        <button class="btn">оформть заявку</button>
+        <button class="btn">оформить заявку</button>
         <button class="btn-close">&#215;</button>
     </form>
 </div>
